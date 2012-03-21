@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>{% block title%}hola {% endblock%}</title>
+	</head>
+	<body>
+		{% block p %}
+			<p>soy p</p>
+		{%endblock%}
+		{% block h %}
+			<h1>soy h1</h1>
+		{% endblock %}
+		{% comment %} <p>hola soy comentario</p> {% endcomment %}
+		<li><a href="{% url hijo %}">hijo</a></li>
+		<li><a href="{% url loop %}">loop</a></li>
+		<li><a href="/">index</a></li>		
+	</body>
+</html>

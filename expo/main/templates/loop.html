@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Blog</title>
+</head>
+<body>
+    <div>
+        Mi primer loop - Inicio
+    </div>
+    <hr/>
+    {% for student in students %}
+    <div>
+        <h3>{{ student.name }} - {{ student.number }} ({{ student.pets.count }})</h3>
+        <div class="pets">
+            {% for pet in student.pets.all %}
+            	<div>Name: {{ pet.name }}</div>
+		<div>Description: {{ pet.decription }}</div>
+		{% if pet.decription == "cuyo" %}
+			<p>Son abisinos</p>
+		{% else %}
+			<p>No es cuyo</p>
+		{% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
